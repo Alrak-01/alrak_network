@@ -8,7 +8,21 @@
     <h2>We're currently in the developers page</h2>
     <p>View the list of developers below</p>
     <ul>
-    <li>Alracode</li>
+    <li>
+        <a href="/show/{{$developer[0]["id"]}}">
+            {{ $developer[0]["name"] }}
+        </a>
+    </li>
+    <li>
+        <a href="/show/{{$developer[1]["id"]}}">
+            {{ $developer[1]["name"] }}
+        </a>
+    </li>
+    <li>
+        <a href="/show/{{$developer[2]["id"]}}">
+            {{ $developer[2]["name"] }}
+        </a>
+    </li>
     </ul>
 </body>
 </html>
