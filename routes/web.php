@@ -13,9 +13,9 @@ Route::get("/developers", function(){
         ['name' => 'Kunle', 'skill' => 'Laravel, React.js', 'id' => '3']
     ];
     
-    return view("developers.index", ["developer" => $developers]);
+    return view("developers.index", ["developers" => $developers]);
 });
 
-Route::get("/show/{id}", function($id) {
+Route::get("/developer/{id}", function($id) {
     return view("developers.show", ['id' => $id]);
 });
