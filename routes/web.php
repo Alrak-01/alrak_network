@@ -19,3 +19,7 @@ Route::get("/developers", function(){
 Route::get("/developer/{id}", function($id) {
     return view("developers.show", ['id' => $id]);
 });
+
+Route::get("/developers/create", function(){
+    return view("developers.create");
+});
