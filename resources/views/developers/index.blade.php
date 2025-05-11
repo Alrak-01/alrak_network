@@ -5,10 +5,9 @@
 
     @foreach( $developers as $developer)
         <li>
+        <x-card href="/developer/{{ $developer['id']}}" :highlight=" $developer['skill'] <= 100 ">
         <p> {{ $developer["name"] }} </p>
-        <a href="/developer/{{ $developer["id"] }}">
-            View details
-        </a>
+        </x-card>
     </li>
     @endforeach
     </ul>

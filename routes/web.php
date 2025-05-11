@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::get("/developers", function(){
     $developers = [
-        ['name' => 'Tunde', 'skill' => 'Html, Tailwindcss', 'id' => '1'],
+        ['name' => 'Tunde', 'skill' => 70, 'Tailwindcss', 'id' => '1'],
         ['name' => 'Wale', 'skill' => 'TypeScript, Node js', 'id' => '2'],
         ['name' => 'Kunle', 'skill' => 'Laravel, React.js', 'id' => '3']
     ];
