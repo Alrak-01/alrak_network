@@ -1,7 +1,6 @@
 <x-layout>
-    <h2>We're currently in the developers page</h2>
-    <p>View the list of developers below</p>
-    <ul>
+    <p class="font-semibold pt-14 pb-5 text-stone">View the list of developers below</p>
+    <ul class="flex flex-col gap-5">
 
     @foreach( $developers as $developer)
         <li>
