@@ -17,7 +17,9 @@ class DeveloperFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "name" => fake()->name(),
+            "skill" => fake()->numberBetween(0, 100),
+            "bio" => fake()->realText(500)
         ];
     }
 }
