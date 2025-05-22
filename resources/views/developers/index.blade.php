@@ -4,7 +4,7 @@
 
     @foreach( $developers as $developer)
         <li>
-        <x-card href="/developer/{{ $developer->id }}" :highlight=" $developer['skill'] <= 100 ">
+        <x-card href="{{ route('developer.show', $developer->id)  }}" :highlight=" $developer['skill'] <= 100 ">
         <p> {{ $developer->name }} </p>
         </x-card>
     </li>

@@ -10,8 +10,8 @@
 <nav class="pb-5 bg-white lg:px-36 px-3 py-5 lg:flex space-y-1 items-center justify-between">
     <h3 class="text-red-400 font-extrabold text-lg">Developer Network</h3>
     <ul class="text-sm flex items-center justify-end gap-5 font-medium ">
-        <li class="hover:text-red-400 transition delay-100 duration-300"><a href="/developers">All Developers</a></li>
-        <li class="hover:text-red-400 transition delay-100 duration-300"><a href="/developers/create">Create New Developer</a></li>
+        <li class="hover:text-red-400 transition delay-100 duration-300"><a href={{ route("developer.index") }}>All Developers</a></li>
+        <li class="hover:text-red-400 transition delay-100 duration-300"><a href={{ route("developer.create") }}>Create New Developer</a></li>
     </ul>
 </nav>
 

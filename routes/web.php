@@ -8,9 +8,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/developers", [DeveloperController::class, "index"]);
+Route::get("/developers", [DeveloperController::class, "index"])->name("developer.index");
 
-Route::get("/developers/create", [DeveloperController::class, "create"]);
+Route::get("/developers/create", [DeveloperController::class, "create"])->name("developer.create");
 
-Route::get("/developer/{id}", [DeveloperController::class, "show"]);
+Route::get("/developer/{id}", [DeveloperController::class, "show"])->name("developer.show");
 
