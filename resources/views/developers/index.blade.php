@@ -1,6 +1,6 @@
 <x-layout>
     <p class="font-semibold pt-14 pb-5 text-stone">View the list of developers below</p>
-    <ul class="flex flex-col gap-5">
+    <ul class="flex flex-col gap-5 pb-5">
 
     @foreach( $developers as $developer)
         <li>
@@ -10,4 +10,6 @@
     </li>
     @endforeach
     </ul>
+
+    {{ $developers->links() }}
 </x-layout>
