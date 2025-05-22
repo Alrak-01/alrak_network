@@ -19,7 +19,7 @@
 {{ $slot }}
 </menu>
     
-    <footer class="font-semibold text-center">
+    <footer class="font-semibold text-center pb-5">
         <p>@copyright <span class="text-red-600 uppercase">surecoders</span></p>
     </footer>
 </body>
