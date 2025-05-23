@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Stack;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\developer>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Stack>
  */
-class DeveloperFactory extends Factory
+class StackFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,9 +18,8 @@ class DeveloperFactory extends Factory
     {
         return [
             "name" => fake()->name(),
-            "skill" => fake()->numberBetween(0, 100),
-            "bio" => fake()->realText(500),
-            "stack_id" => Stack::inRandomOrder()->first()->id
+            "category" => fake()->word(),
+            "description" => fake()->paragraph(2)
         ];
     }
 }
