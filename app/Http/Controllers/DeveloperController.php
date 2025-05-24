@@ -9,12 +9,12 @@ use App\Models\Developer;
 class DeveloperController extends Controller
 {
     public function index() {
-    $developers = Developer::orderBy("created_at", "desc")->paginate(10);
+    $developers = Developer::with("stack")->orderBy("created_at", "desc")->paginate(10);
     return view("developers.index", ["developers" => $developers]);
     }
 
     public function show($id) {
-    $developer = Developer::findorFail($id);
+    $developer = Developer::with("stack")->findorFail($id);
     return view("developers.show", ['developer' => $developer]);
     }
 
