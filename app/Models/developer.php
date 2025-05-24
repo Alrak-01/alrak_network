@@ -10,4 +10,8 @@ class Developer extends Model
     protected $fillable = ["name", "skill", "bio"];
     /** @use HasFactory<\Database\Factories\DeveloperFactory> */
     use HasFactory;
+
+    public function stack(){
+        return $this->belongsTo(Stack::class);
+    }
 }

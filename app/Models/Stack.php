@@ -10,4 +10,8 @@ class Stack extends Model
     protected $fillable = ["name", "category", "description"];
     /** @use HasFactory<\Database\Factories\StackFactory> */
     use HasFactory;
+
+    public function Developer(){
+        return $this->hasMany(Developer::class);
+    }
 }

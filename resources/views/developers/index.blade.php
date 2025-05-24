@@ -5,7 +5,10 @@
     @foreach( $developers as $developer)
         <li>
         <x-card href="{{ route('developer.show', $developer->id)  }}" :highlight=" $developer['skill'] <= 100 ">
-        <p> {{ $developer->name }} </p>
+        <div class="grid gap-3">
+        <h3> {{ $developer->name }} </h3>
+        <p class="text-sm font-light">{{ $developer->stack->name }}</p>
+        </div>
         </x-card>
     </li>
     @endforeach
