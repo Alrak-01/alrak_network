@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Stack;
 use App\Models\Developer;
 
 class DeveloperController extends Controller
@@ -19,6 +19,7 @@ class DeveloperController extends Controller
     }
 
     public function create() {
-    return view("developers.create");
+    $stacks = Stack::all();
+    return view("developers.create", ["stacks" => $stacks]);
     }
 }
