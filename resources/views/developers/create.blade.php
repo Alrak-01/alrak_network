@@ -1,7 +1,7 @@
 <x-layout>
 <h3 class="font-semibold text-xl py-5 text-center">Create New Developer</h3>
 
-<form action="" class="border border-gray-300 shadow-lg p-5 rounded-lg grid gap-5">
+<form action="{{ route('developer.save') }}" method="POST" class="border border-gray-300 shadow-lg p-5 rounded-lg grid gap-5">
 @csrf
     <div class="name grid gap-2">
     <label for="name" class="font-medium">Name</label>
@@ -18,9 +18,9 @@
     <textarea name="bio" id="bio" placeholder="Bio" required class="bg-white px-2 py-2 outline-none text-sm rounded-md"></textarea>
     </div>
 
-     <div class="stack grid gap-2">
-    <label for="stack" class="font-medium">Stack</label>
-    <Select name="stack" id="stack" class="bg-white px-2 py-2 outline-none text-sm rounded-md">
+     <div class="stack_id grid gap-2">
+    <label for="stack_id" class="font-medium">Stack</label>
+    <Select name="stack_id" id="stack_id" class="bg-white px-2 py-2 outline-none text-sm rounded-md">
     <option value="" disabled selected>Select a Stack</option>
     @foreach($stacks as $stack)
         <option value="{{ $stack->id }}">

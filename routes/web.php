@@ -14,3 +14,5 @@ Route::get("/developers/create", [DeveloperController::class, "create"])->name("
 
 Route::get("/developer/{id}", [DeveloperController::class, "show"])->name("developer.show");
 
+Route::post("/developers", [DeveloperController::class, 'save'])->name("developer.save");
+

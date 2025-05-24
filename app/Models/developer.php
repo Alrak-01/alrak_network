@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Developer extends Model
 {
-    protected $fillable = ["name", "skill", "bio"];
+    protected $fillable = ["name", "skill", "bio", "stack_id"];
     /** @use HasFactory<\Database\Factories\DeveloperFactory> */
     use HasFactory;
 
