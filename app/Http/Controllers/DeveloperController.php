@@ -24,14 +24,21 @@ class DeveloperController extends Controller
     }
 
     public function save(Request $request){
-        $validate = $request->validate([
-            "name" => "required|string|max:255",
-            "skill" => "required|integer|min:1|max:100",
-            "bio" => "required|string|min:20|max:1000",
-            "stack_id" => "required|exists:stacks,id",
-        ]);
+    $validate = $request->validate([
+        "name" => "required|string|max:255",
+        "skill" => "required|integer|min:1|max:100",
+        "bio" => "required|string|min:20|max:1000",
+        "stack_id" => "required|exists:stacks,id",
+    ]);
 
-        Developer::create($validate);
-        return redirect()->route("developer.index");
+    Developer::create($validate);
+    return redirect()->route("developer.index");
+    }
+
+    public function destroy($id) {
+    $developer = Developer::findOrFail($id);
+    $developer->delete();
+
+    return redirect()->route("developer.index");
     }
 }

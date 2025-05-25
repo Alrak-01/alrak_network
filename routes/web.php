@@ -16,3 +16,6 @@ Route::get("/developer/{id}", [DeveloperController::class, "show"])->name("devel
 
 Route::post("/developers", [DeveloperController::class, 'save'])->name("developer.save");
 
+Route::DELETE("/developer/{id}", [DeveloperController::class, "destroy"])->name("developer.destroy");
+
+
