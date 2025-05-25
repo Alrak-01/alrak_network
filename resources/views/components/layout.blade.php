@@ -7,6 +7,12 @@
 </head>
 <body class ="bg-gray-200">
 
+@if(session("success"))
+    <div class="p-4 text-center bg-green-50 text-green-500 font-bold">
+    {{ session("success") }}
+    </div>
+@endif
+
 <nav class="pb-5 bg-white lg:px-36 px-3 py-5 lg:flex space-y-1 items-center justify-between">
     <h3 class="text-red-400 font-extrabold text-lg">Developer Network</h3>
     <ul class="text-sm flex items-center justify-end gap-5 font-medium ">
